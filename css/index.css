@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: 0;
+
+    font-family:'Rubik', sans-serif;
+    color: white;
+}
+
+#background{
+    
+    background-image: linear-gradient(45deg, rgb(62, 67, 96) 0%, rgb(51, 73, 91) 50%, rgb(43, 51, 57) 100%);
+    background-size: 200% 200%;
+    /* animation: colors 15s ease infinite; */
+}
+
+#catalog .logo{
+    width: 150px;
+    height: 150px;
+}
+
+
+#catalog div .title{
+    font-size: 16px;
+    /* border-bottom: 1px dotted white; */
+
+    background-color: rgba(0, 0, 0, 0);
+    transition: filter .35s, font-size .35s, border .25s;
+}
+
+#catalog div .title:hover{
+    font-size: 18px;
+    filter: invert(.5);
+    border-bottom: 1px solid white;
+}
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+
+
+#search-container{
+    display:  none;
+}
+
+/* #search-result {
+    height: 530px;
+} */
+
+
+
+.v {
+    border: 1px solid red;
+}
+
+.x-center{
+    display: flex;
+    align-items: center;
+}
+
+.y-center {
+    display: flex;
+    justify-content: center;
+}
+
+.img-100 {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#search-music{
+    background-color: rgba(61, 61, 61, 0);
+    border-bottom: 1px solid white;
+    outline: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#search-result::content{
+    transition: .45;
+}
+
+
+
+div[id*="musica_"] .info{
+
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 15px;
+    font-size: 12px;
+}
+
+div[id*="musica_"] button{
+    background-color: rgba(61, 61, 61, 0);
+    filter: invert(1);
+
+    transition: filter .35s;
+}
+
+div[id*="musica_"] button:hover{
+    filter: invert(.5);
+}
+
+
+
+
+
+div[id*="album_"] {
+    background-color: rgb(26,44,54);
+    
+}
+
+div[id*="album_"] .icon img {
+    width: 100px;
+    
+}
+
+
+div[id*="album_"] .info{
+
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 5px;
+    font-size: 12px;
+}
+
+div[id*="album_"] .main ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+div[id*="album_"] .main ul li button{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    padding: 3px;
+    font-size: 12px;
+}
+
+
+#player {
+    background-color: rgb(35, 57, 70);
+    /* background-image: linear-gradient(27deg, rgba(44,45,52,1) 0%, rgb(49, 63, 75) 15%);
+    backdrop-filter: blur(5px); */
+    height: 90px;
+}
+
+#player>* {
+    height: 100%;
+}
+
+#player .icon {
+    width: 80px;
+}
+
+#player .icon img {
+    width: 100px;
+}
+
+#player #faixa_musica{
+    font-size: 18px;
+}
+
+#player #faixa_cantor{
+    font-size: 12px;
+}
+
+#player_buttons button {
+    width: 40px;
+    background-color: rgba(61, 61, 61, 0);
+    filter: invert(1);
+
+    transition: filter .35s;
+}
+
+#player_buttons button:hover {
+    filter: invert(.5);
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Sonar Music</title>
+
+
+    <link rel="stylesheet" href="css/index.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+
+
+    <div id="background" class="position-absolute w-100 h-100"></div>
+
+
+    <main class="position-absolute container-fluid clearfix" style="padding: 0;">
+
+        <div id="catalog" class="text-center float-sm-start col-2 h-100 fixed-top"
+            style="background-color: rgb(37, 52, 62);">
+
+            <img class='logo' src="images/logo.png" alt="">
+
+
+            <div id="buttons-catalog" class="mt-3" style="line-height: 1.5;">
+                <div class="text-center col-12">
+                    <button name="albums-container" class="text-start p-1 col-10 title"
+                        style="padding: 0; color:white;">Inicio</button>
+                </div>
+                <div class="text-center col-12">
+                    <button name="search-container" class="text-start p-1 col-10 title"
+                        style="padding: 0; color:white;">Pesquisar</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div style="margin-left: 16.75%;" class="clearfix">
+
+            <div id="containers-list" class="container-fluid clearfix" style="height: 90vh;">
+
+                <div class="clerfix">
+                    <div id="albums-container" class="mt-3 col-12 clearfix" style="overflow-y: scroll; height:565px">
+                    </div>
+                </div>
+
+                <div id="search-container" class="col-12 clearfix float-sm-start">
+
+                    <div class="col-5 float-sm-start">
+
+
+                        <input type="search" id="search-music" class=" col-12 clearfix">
+                        <div id="search-result" class="col-12 mt-3" style="overflow-y: scroll; height: 80vh;">
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-6 float-sm-end text-start mt-4 p-5 rounded"
+                        style="overflow-y: scroll; height: 82.5vh; background-color: rgb(35, 57, 70);">
+
+                        <h1 id="musica-nome" class="text-center"></h1>
+
+                        <div id="music-letra" class="mt-2 col-9 me-5"
+                            style="font-size: 12px; text-align: justify; font-family: Arial, Helvetica, sans-serif;">
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div id="player" class="fixed-bottom p-2 clearfix">
+
+            <audio id="player_audio"></audio>
+
+            <div class="icon float-sm-start p-1 clearfix">
+                <img id="player_icon" class="h-100 w-100 rounded" src="images/music_empty.png" alt="">
+            </div>
+
+            <div class="faixa top-50 col-3 ms-2 float-sm-start " style="line-height: 0px">
+                <p id="player_faixa">
+                <h5 id="faixa_musica"></h5>
+                <p id="faixa_cantor"></p>
+                </p>
+            </div>
+
+            <div class="col-5 float-sm-start text-center position-relative ">
+
+                <label id="faixa_currentTime">00:00</label>
+                <input type="range" class="col-9 mt-2" id="player_timeline" min="0" max="0" value="0" step="1">
+                <label id="faixa_finishedTime">00:00</label>
+
+                <div id="player_buttons" class="mt-1">
+                    <button id="player_back"><img class="img-100" src="images/back.png" alt=""></button>
+                    <button id="player_play"><img class="img-100" src="images/play.png" alt="play"></button>
+                    <button id="player_next"><img class="img-100" src="images/next.png" alt=""></button>
+                </div>
+            </div>
+
+            <div class="float-sm-end text-center y-center me-4">
+                <input type="range" id="player_volume" class="col-12" value="20" min="0" max="100">
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="js/eventos.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+    <!--Testando Scripts-->
+    <script type="text/javascript">
+
+        player.start();
+        player.update();
+
+        document.querySelector('#search-music').addEventListener('change', SearchMusic);
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
